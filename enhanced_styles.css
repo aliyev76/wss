@@ -1,0 +1,107 @@
+
+/* Enhanced Global Styles */
+:root {
+  /* Light Mode Colors */
+  --primary-bg-color: #ffffff;
+  --primary-text-color: #000000;
+  --accent-color: #1e90ff; /* DodgerBlue for accents */
+  --secondary-bg-color: #f8f9fa;
+  --border-color: #dee2e6;
+  --secondary-text-color: #6c757d;
+
+  /* Dark Mode Colors */
+  --dark-primary-bg-color: #121212;
+  --dark-primary-text-color: #ffffff;
+  --dark-accent-color: #bb86fc;
+  --dark-secondary-bg-color: #1e1e1e;
+  --dark-border-color: #373737;
+  --dark-secondary-text-color: #a1a1a1;
+
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  --base-font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  line-height: 1.6;
+}
+
+[data-theme="dark"] {
+  background-color: var(--dark-primary-bg-color);
+  color: var(--dark-primary-text-color);
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--secondary-bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+/* Buttons */
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: darken(var(--accent-color), 10%);
+}
+
+/* Cards */
+.card {
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
